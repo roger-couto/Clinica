@@ -1,27 +1,26 @@
-<%@ page contentType="text/html; ISO-8859-1" language="java" %>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@page isELIgnored="false" %>
-
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
 <html>
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/index.css?v=${System.currentTimeMillis()}">
+</head>
 <body>
-<h2>Logar no sistema!</h2>
-<form action="login" method="post">
-    <label for="email">
-        <b>Login</b>
-    </label>
-    <input type="email" placeholder="E-mail" name="email" required>
-    <br><br>
-    <label for="senha">
-        <b>Senha</b>
-    </label>
-    <input type="password" placeholder="Senha" name="senha" required>
-
-    <input type="submit" value="LOGAR" name="login" >
-
-    <c:if test="${not empty msg}">
-        <h2>${msg}</h2>
-    </c:if>
-
-</form>
+<div class="login-container">
+  <h2>Login</h2>
+  <% if(request.getAttribute("mensagemErro") != null) { %>
+  <div class="error-message">${mensagemErro}</div>
+  <% } %>
+  <form action="login" method="post">
+    <label for="email">E-mail:</label>
+    <input type="text" id="email" name="email" required>
+    <label for="senha">Senha:</label>
+    <input type="password" id="senha" name="senha" required>
+    <button type="submit">Entrar</button>
+  </form>
+  <div class="register-link">
+    <a href="cadastro.jsp">Novo Usuário</a>
+  </div>
+</div>
 </body>
 </html>

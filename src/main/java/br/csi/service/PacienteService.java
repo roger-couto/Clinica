@@ -1,5 +1,4 @@
 package br.csi.service;
-
 import br.csi.dao.ConectarBancoDados;
 import br.csi.dao.PacienteDAO;
 import br.csi.model.Paciente;

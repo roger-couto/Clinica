@@ -67,6 +67,11 @@ tr:hover {
     margin-right: 5px;
 }
 
+.consulta-btn {
+    background-color: #2ecc71;
+    color: white;
+}
+
 .edit-btn {
     background-color: #3498db;
     color: white;

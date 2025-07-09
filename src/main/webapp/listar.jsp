@@ -12,6 +12,7 @@
 <div class="container">
   <h1>Meus Pacientes</h1>
 
+  <a href="consulta?action=listar" class="add-btn">Consultas Marcadas</a>
   <a href="pacientes?action=new" class="add-btn">Novo Paciente</a>
   <a href="${pageContext.request.contextPath}/logout" class="logout-btn">Sair</a>
 
@@ -35,6 +36,7 @@
         </td>
         <td>${paciente.status}</td>
         <td class="actions">
+          <a href="consulta?action=form&idPaciente=${paciente.id}" class="consulta-btn">Marcar Consulta</a>
           <a href="pacientes?id=${paciente.id}" class="edit-btn">Editar</a>
           <a href="pacientes?id=${paciente.id}&action=delete"
              onclick="return confirm('Tem certeza que deseja excluir?')" class="delete-btn">Excluir</a>

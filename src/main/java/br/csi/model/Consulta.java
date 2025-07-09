@@ -25,7 +25,6 @@ public class Consulta {
         this.psicologoId = psicologoId;
     }
 
-    // Getters e Setters
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
 
@@ -47,7 +46,7 @@ public class Consulta {
     public Paciente getPaciente() { return paciente; }
     public void setPaciente(Paciente paciente) { this.paciente = paciente; }
 
-    // ✅ Método auxiliar para usar na JSP
+
     public Date getDataHoraAsDate() {
         if (this.dataHora == null) return null;
         return Date.from(this.dataHora.atZone(ZoneId.systemDefault()).toInstant());

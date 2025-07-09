@@ -36,7 +36,6 @@ public class PacienteController extends HttpServlet {
 
         try {
             if("new".equals(action)) {
-                // Passa o ID do psicólogo para o formulário
                 req.setAttribute("psicologoId", psicologo.getId());
                 RequestDispatcher rd = req.getRequestDispatcher("/form.jsp");
                 rd.forward(req, resp);
@@ -56,7 +55,6 @@ public class PacienteController extends HttpServlet {
                 }
             }
             else {
-                // Lista apenas pacientes do psicólogo logado
                 req.setAttribute("pacientes", service.listarPorPsicologo(psicologo.getId()));
                 RequestDispatcher rd = req.getRequestDispatcher("/listar.jsp");
                 rd.forward(req, resp);

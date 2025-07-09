@@ -1,9 +1,9 @@
 package br.csi.service;
 
-import br.csi.dao.ConectarBancoDados;  // Importação adicionada
+import br.csi.dao.ConectarBancoDados;
 import br.csi.dao.PsicologoDAO;
 import br.csi.model.Psicologo;
-import java.sql.Connection;            // Importação do JDBC
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;

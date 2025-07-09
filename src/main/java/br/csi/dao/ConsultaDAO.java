@@ -94,7 +94,6 @@ public class ConsultaDAO {
                         rs.getInt("psicologo_id")
                 );
 
-                // Verifica se tem nome de paciente antes de setar
                 String nomePaciente = rs.getString("paciente_nome");
                 if (rs.getInt("paciente_id") > 0 && nomePaciente != null && !nomePaciente.isBlank()) {
                     Paciente paciente = new Paciente();
